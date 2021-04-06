@@ -1,0 +1,65 @@
+
+    
+<div fxLayoutAlign="center left" fxFlexFill class="main-div">
+    <mat-card > 
+        <form fxLayout="standard"  >   
+            <div fxLayout="column"> 
+                <div fxLayoutGap="15px" >
+                    
+                    <mat-form-field appearance="fill" class="row-1">
+                        <mat-label>Enter First Name</mat-label>
+                        <input matInput placeholder="Placeholder">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="row-1">
+                        <mat-label>Enter Last Name</mat-label>
+                        <input matInput placeholder="Placeholder">
+                    
+                    </mat-form-field>
+                </div>
+                <div fxLayoutGap="15px">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter Email-ID</mat-label>
+                        <input matInput pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="Placeholder" >
+                    
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter Phonenumber</mat-label>
+                        <input matInput pattern="[789][0-9]{9}" placeholder="Placeholder">
+                    
+                    </mat-form-field>
+                </div>
+                <div fxLayoutGap="15px">
+                    <mat-form-field appearance="fill">
+                        <mat-label style="font-size: 20px;"> Address </mat-label>
+                        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="4">
+
+                        </textarea>
+                      </mat-form-field>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Age</mat-label>
+                        <input matInput placeholder="Placeholder">
+                    
+                     </mat-form-field>
+                </div>
+                <div fxLayoutGap="15px">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter Bloodgroup</mat-label>
+                        <input matInput pattern="[O+|O-|A+|A-|B+|B-|AB+|AB-]" placeholder="Placeholder" >
+                    
+                    </mat-form-field>  
+                </div>
+                <div  fxLayout="row">
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button value="Male" checked="true" style="padding-right: 10px;">Male  </mat-radio-button>
+                        <mat-radio-button value="Female">Female</mat-radio-button>
+                      </mat-radio-group>
+                      
+                </div>
+                <button  class="btn btn-outline-primary" type="submit">Add Details</button>
+            </div>
+
+        </form>
+    </mat-card>
+
+</div>
+
