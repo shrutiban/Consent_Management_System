@@ -8,7 +8,7 @@ public class End_User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String UID;
     @Column( nullable = false)
-    private String User_Role;
+
     private String User_Type;
     @Column( nullable = false)
     private String username;
@@ -19,9 +19,11 @@ public class End_User {
     @Column(nullable = false)
     private String password;
 
-    public End_User(String UID, String user_Role, String user_Type, String username, String email, String password) {
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Role User_Role;
+
+    public End_User(String UID, String user_Type, String username, String email, String password) {
         this.UID = UID;
-        User_Role = user_Role;
         User_Type = user_Type;
         this.username = username;
         this.email = email;
@@ -29,6 +31,14 @@ public class End_User {
     }
 
     public End_User() {
+    }
+
+    public Role getUser_Role() {
+        return User_Role;
+    }
+
+    public void setUser_Role(Role user_Role) {
+        User_Role = user_Role;
     }
 
     public String getUID() {
@@ -39,13 +49,6 @@ public class End_User {
         this.UID = UID;
     }
 
-    public String getUser_Role() {
-        return User_Role;
-    }
-
-    public void setUser_Role(String user_Role) {
-        User_Role = user_Role;
-    }
 
     public String getUser_Type() {
         return User_Type;
