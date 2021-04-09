@@ -9,7 +9,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {MatButtonModule} from '@angular/material/button'; 
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 import {MatSelectModule} from '@angular/material/select'; 
 import {MatToolbarModule} from '@angular/material/toolbar'; 
@@ -20,6 +21,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
+import { DemographicFormComponent } from './demographic-form/demographic-form.component';
+
+import {MatRadioModule} from '@angular/material/radio'; 
 
 @NgModule({
   declarations: [
@@ -27,6 +31,7 @@ import { AuthService } from './services/auth.service';
     LoginPageComponent,
     NavbarComponent,
     HomePageComponent,
+    DemographicFormComponent,
 
   ],
   imports: [
@@ -43,6 +48,8 @@ import { AuthService } from './services/auth.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxSpinnerModule,
+    MatRadioModule,
 
 
 
@@ -50,6 +57,7 @@ import { AuthService } from './services/auth.service';
 
   ],
   providers: [AuthService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

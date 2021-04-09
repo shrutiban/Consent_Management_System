@@ -22,6 +22,8 @@ export class AuthService {
   */
 
   login(credentials: any):Observable<any> {
+    console.log("Inside AUthService: ",credentials.USERNAME)
+    console.log("Inside AUthService: ",credentials.PASSWORD)
     return this.http.post(`${baseUrl}login`,credentials)
   }
 }

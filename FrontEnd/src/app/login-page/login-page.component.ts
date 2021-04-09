@@ -53,28 +53,18 @@ export class LoginPageComponent implements OnInit {
 
   }
   ngOnInit(): void {
+
+    console.log("inside nginit");
     this.initForm()
 
 
   }
-  /*signIn(credentials: any): void {
-    this.authService.login(credentials)
-    .subscribe((result: any)=>{
-      if(result)
-        this.router.navigate(['/']);
-      else
-        this.invalidLogin=true;
-    });
-
-
   
-  
-}
-*/
 formGroup! : FormGroup ;
 
 initForm()
 {
+  console.log("inside initform");
   this.formGroup = new FormGroup({
       USERNAME: new FormControl('',[Validators.required]),
       PASSWORD: new FormControl('',[Validators.required]),
@@ -96,14 +86,17 @@ loginProcess(){
   {
     this.authService.login(this.formGroup.value).subscribe(result=>{
       if(result.success){
-        console.log(result);
+        console.log("came into loginProcess()",result);
         alert(result.message);
+        
       }
       else{
+        console.log("inside else of loginprocess")
         alert(result.message);
       }
     })
   }
+  this.router.navigateByUrl('/demographicForm');
 }
 
 }
