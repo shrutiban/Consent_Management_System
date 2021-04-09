@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ConsentManagement:war">
+    <output-path>$PROJECT_DIR$/Consent_management_system/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ConsentManagement</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="${project.artifactId}-${project.version}.war">
+      <element id="artifact" artifact-name="ConsentManagement:war exploded" />
+    </root>
+  </artifact>
+</component>

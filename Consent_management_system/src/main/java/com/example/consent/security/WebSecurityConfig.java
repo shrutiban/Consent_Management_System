@@ -1,3 +1,4 @@
+package com.example.consent.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,9 +14,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.grokonez.jwtauthentication.security.jwt.JwtAuthEntryPoint;
-import com.grokonez.jwtauthentication.security.jwt.JwtAuthTokenFilter;
-import com.grokonez.jwtauthentication.security.services.UserDetailsServiceImpl;
+//import com.grokonez.jwtauthentication.security.jwt.JwtAuthEntryPoint;
+//import com.grokonez.jwtauthentication.security.jwt.JwtAuthTokenFilter;
+//import com.grokonez.jwtauthentication.security.services.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity

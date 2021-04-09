@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Consent_management_system/ConsentManagement.iml" filepath="$PROJECT_DIR$/Consent_management_system/ConsentManagement.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Consent_Project.iml" filepath="$PROJECT_DIR$/.idea/Consent_Project.iml" />
     </modules>
   </component>
