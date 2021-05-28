@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -27,6 +27,7 @@
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
     "ngx-bootstrap": "^6.2.0",
+    "ngx-spinner": "^11.0.1",
     "popper": "^1.0.1",
     "rxjs": "~6.6.0",
     "rxjs-compat": "^6.6.6",
